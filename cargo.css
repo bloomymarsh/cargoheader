@@ -1,0 +1,381 @@
+/* styles.css */
+@font-face {
+  font-family: "Amperzand";
+  src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Amperzand.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Noe";
+  src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Noe-Display-Bold.ttf")
+    format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Gulzar&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: orange;
+}
+
+/* selected link */
+a:active {
+  color: lightblue;
+}
+
+::-moz-selection {
+  color: white;
+  background: orange;
+}
+
+::selection {
+  color: white;
+  background: orange;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Newsreader, serif;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: 71vh;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-image: url(https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/Museum%20bgg.png);
+  mix-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  /*   border: 3px solid green; */
+}
+
+.header-section h4,
+.header-section p {
+  margin: 5px 0;
+}
+
+.header-section.left {
+  width: calc(33.3% - 1px);
+  text-align: right;
+  border-right: 2px solid black;
+  padding-right: 15px;
+}
+
+.header-section.middle {
+  width: 100%;
+  text-align: center;
+  position: absolute; /* Make it take position relative to its container */
+  top: 0; /* Align it at the top */
+  left: 50%; /* Move it to the center horizontally */
+  transform: translateX(-50%); /* Adjust to ensure it's perfectly centered */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align content at the top of the section */
+  max-width: 100%;
+  /*   margin-top: 20px;  */
+  /*   border: 3px solid green; */
+}
+
+.header-section.middle h1 {
+  font-family: Amperzand, serif;
+  font-size: 35px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.marshafabiola:hover::after {
+  content: "?";
+  color: orange;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.header-section.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: calc(33.3% - 1px);
+  text-align: left;
+  border-left: 2px solid black;
+  padding-left: 15px;
+}
+
+/* .rightpicsec {
+  position: relative;
+}
+
+.rightpicsec .rightpic-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rightpicsec:hover .rightpic-hover {
+  display: block;
+} */
+
+/* .header-section.right div.text-container {
+  display: flex;
+  flex-direction: column;
+} */
+
+.museum {
+  /*   border: 3px solid red; */
+  display: flex;
+  position: relative;
+  /*   top: -100px; */
+  width: 100%;
+  height: 400px;
+  background-color: #f4f4f4;
+}
+
+.museumwall {
+  position: absolute;
+  left: 12%;
+  top: -10%;
+
+  /*   line-height: 0.5; */
+}
+
+.museumwall h4 {
+  /*   border: 3px solid red; */
+  font-size: 50px;
+  color: grey;
+  /*   position: absolute; */
+  /*   left: 12%;*/
+  top: -40%;
+}
+
+.museumwall p {
+  font-size: 20px;
+  color: grey;
+}
+
+.museumavatar {
+  /*         border: 3px solid red; */
+  transform: scale(1.5);
+  position: absolute;
+  left: 10%;
+  /*   top: -10px; */
+  width: 100px;
+  height: 200px;
+}
+
+.avatars-container {
+  /*     border: 3px solid green; */
+  /*   cursor: grab; */
+  background-image: url(https://cdn.pixabay.com/photo/2018/07/16/10/15/frame-3541621_960_720.png);
+  background-size: 100px;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 1000;
+  transition: background-color;
+}
+
+.avatars-container:hover {
+  background-color: orange; /* Orange overlay */
+  background-blend-mode: multiply;
+}
+
+.avatars-container img {
+  width: 66px;
+  display: none;
+  position: absolute;
+  left: 18%;
+  rotate: 0.4deg;
+}
+
+img.displaySlide {
+  display: block;
+}
+
+.avatardesc {
+  width: 100%;
+  font-size: 8px;
+  position: absolute;
+  top: 65%;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: #f4f4f4 -2px 2px;
+}
+
+/* /* .popup {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Full-screen overlay */
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;
+  transition: opacity;
+  z-index: 1000;
+}
+
+/* Show the overlay */
+.popup-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* The modal itself */
+/* The modal itself */
+.modal {
+  position: fixed; /* Keep the modal fixed on the screen */
+  top: 50%; /* Position from the top */
+  left: 50%; /* Position from the left */
+  transform: translate(-50%, -50%); /* Center it using translate */
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+  padding-bottom: 3rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Show the modal */
+.modal.show {
+  visibility: visible;
+}
+
+.message {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.done {
+  width: auto;
+  color: black;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  background: white;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.done:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+}
+
+.done:active {
+  box-shadow: 0 0 0 black;
+}
+
+.prev,
+.next {
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+.next {
+  right: 0%;
+}
+
+.prev:hover,
+.next:hover {
+  color: orange;
+}
+
+.prev:active,
+.next:active {
+  font-size: 10px;
+}
+
+.avatarlabel {
+  width: 80px;
+  border: 1px solid grey;
+  background-color: transparent;
+  position: inherit;
+  bottom: 0px;
+  padding: 3px 9px;
+}
+
+.museumdino {
+  /*   border: 3px solid red; */
+  position: absolute;
+  left: 10%;
+  bottom: 0px;
+  width: 500px;
+  height: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.dinolabel {
+  background-color: #f4f4f4;
+  border: 1px solid black;
+  padding: 10px;
+  position: absolute;
+  left: 25px;
+}
+
+.table {
+  position: relative;
+  top: 10%;
+  right: 17%;
+  mix-blend-mode: multiply;
+  width: 15%;
+}
