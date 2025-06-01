@@ -1,0 +1,78 @@
+<head>
+  <html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bloomy Marsh">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title style="font-family: 'Amperzand'">Bloomy ✦ Marsh</title>
+  <link id="favicon" rel="icon" type="image/png" href="font/Krakatoa.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gulzar&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bloomymarsh.css">
+      <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/controls/OrbitControls.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/GLTFLoader.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Marsha Fabiola",
+      "url": "https://bloomymarsh.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/marshafabiola",
+        "https://github.com/bloomymarsh",
+        "https://www.instagram.com/marshbiola/"
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  
+  <header>
+    <div id="header">
+      <div class="header-section middle">
+        <h1 id="dynamic-header">Bloomy ✦ Marsh</h1>
+        <nav>
+          <p>Official Portfolio of <a target="_blank" rel="noopener noreferrer" href="marshafabiola.html" class="marshafabiola">Marsha Fabiola</a></p>
+        </nav>
+      </div>
+
+      <div class="modal" id="modal">
+        <p class="message">Hi there! I am Marsha Fabiola from Indonesia. I am a education technology enthusiast with a strong interest in working with non-profit organizations that works in technology implementation to democratize science education. <br>Particularly museum exhibition, interaction and school operational change in technology. My expertise encompasses both fundamental and practical aspects of Javascript-based development (LMS, Three.JS), curriculum development, and programming.</p>
+        <button class="done" onclick="togglePopup()">Nice to e-meet you!</button>
+      </div>
+
+      <div id="museumavatar" class="museumavatar">
+        <div class="popup" onclick="togglePopup()">
+          <div id="avatars-container" class="avatars-container">
+            <div class="avatars">
+              <img class="slide" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/marsh1.png" alt="irl">
+              <img class="slide" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/marsh2.png" alt="memoji">
+              <img class="slide" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/marsh3.png" alt="notion face">
+              <img class="slide" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/marsh4.png" alt="bitmoji">
+            </div>
+            <div class="avatardesc">
+              <p id="avatarText"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="prev" onclick="prevSlide()">←</div>
+        <div class="next" onclick="nextSlide()">→</div>
+        <div class="avatarlabel">
+          <p style="font-size: 7px;"><b>Do I Look Like My Avatars?</b></p>
+          <p style="font-size: 6px;"><i>Comparison in between picture in real life and personalized avatars made from Apple Memoji, Notion Faces, and Bitmoji.</i></p>
+          <p style="font-size: 6px;">c. 2025</p>
+        </div>
+      </div>
+
+      <canvas id="c"></canvas>
+      <div id="canvas-hover" style="display:none;">Drag and Zoom the Dino Head!</div>
+      <img class="table" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/table.jpg" alt="table">
+    </div>
+
+  </header>
+
+</body>
